@@ -42,7 +42,16 @@ Herramientas de desarrollo:
 - Visual Studio Code
 - Git
 - GitHub
+## Instrucciones para ejecutar el proyecto
+https://github.com/zotamingaalejandro-prog/TIENDA-EDITH
 
+1. Entrar en la carpeta del proyecto
+   cd proyecto-crud-fastapi
+2. Instalar dependencias necesarias
+   pip install fastapi uvicorn 
+3. Ejecutar el servidor
+   uvicorn main:app --reload
+## entrar a la pagina web
 http://127.0.0.1:8000/
 http://127.0.0.1:8000/Doc
 
