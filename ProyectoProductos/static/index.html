@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRUD de Productos (FastAPI + Fetch)</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="container">
+   <h1>Tienda Edith</h1>
+    <h1>Productos</h1>
+    
+    <section class="card">
+      <h2>Listado</h2>
+      <div class="table-wrapper">
+        <table id="tabla-productos">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+              <th>Acciones</th>
+            </tr>
+          <thead>
+          <tbody id="tbody-productos">
+            <!-- filas renderizadas por JS -->
+          </tbody>
+        </table>
+      </div>
+      <p id="mensaje-tabla" class="mensaje"></p>
+    </section>
+    
+    <section class="grid-2">
+      <div class="card">
+        <h2>Agregar producto</h2>
+        <form id="form-agregar">
+          <label>
+            Código
+            <input type="number" id="add-codigo" required min="1" />
+          </label>
+          <label>
+            Descripción
+            <input type="text" id="add-descripcion" required minlength="3" maxlength="100" />
+          </label>
+          <label>
+            Precio
+            <input type="number" id="add-precio" required min="0.01" step="0.01" />
+          </label>
+          <button type="submit">Agregar</button>
+          <p id="msg-agregar" class="mensaje"></p>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Editar producto</h2>
+        <form id="form-editar">
+          <label>
+            Código (no editable)
+            <input type="number" id="edit-codigo" readonly />
+          </label>
+          <label>
+            Descripción
+            <input type="text" id="edit-descripcion" minlength="3" maxlength="100" />
+          </label>
+          <label>
+            Precio
+            <input type="number" id="edit-precio" min="0.01" step="0.01" />
+          </label>
+          <div class="row">
+            <button type="submit">Guardar cambios</button>
+            <button type="button" id="btn-cancelar-edicion" class="secondary">Cancelar</button>
+          </div>
+          <p id="msg-editar" class="mensaje"></p>
+        </form>
+        <p class="tip">Hacé clic en <strong>Editar</strong> en la tabla para precargar acá los datos.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
+
+<h1>Clientes</h1>
+
+<section class="card">
+
+<h2>Listado de Clientes</h2>
+
+<div class="table-wrapper">
+<table id="tabla-clientes">
+
+<thead>
+<tr>
+<th>Código</th>
+<th>Nombre</th>
+<th>Email</th>
+<th>Acciones</th>
+</tr>
+</thead>
+
+<tbody id="body-clientes">
+</tbody>
+
+</table>
+</div>
+
+</section>
+
+<section class="grid-2">
+
+<div class="card">
+
+<h2>Agregar Cliente</h2>
+
+<form id="form-clientes">
+
+<label>Código</label>
+<input type="number" id="cliente-id">
+
+<label>Nombre</label>
+<input type="text" id="cliente-nombre">
+
+<label>Email</label>
+<input type="text" id="cliente-email">
+
+<button type="submit">Guardar</button>
+
+</form>
+
+</div>
+
+</section>
